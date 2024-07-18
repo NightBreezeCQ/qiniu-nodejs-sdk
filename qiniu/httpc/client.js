@@ -19,7 +19,7 @@ function HttpClient (options) {
     this.httpAgent = options.httpAgent || http.globalAgent;
     this.httpsAgent = options.httpsAgent || https.globalAgent;
     this.middlewares = options.middlewares || [];
-    this.timeout = options.timeout;
+    this.timeout = options.timeout || 30000;
 }
 
 HttpClient.prototype._handleRequest = function (req) {
